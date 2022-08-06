@@ -1,0 +1,19 @@
+### AUTOLOCK CONTROL FROM i3 CONFIG
+### LICENSE BY MR. RED
+
+### Setting mode
+set $mode_autolock (k)ill, (s)tart
+
+mode "$mode_autolock" {
+### Start
+bindsym s exec xautolock -time 10 -locker lockb &, mode "default"
+### Stop
+bindsym k exec --no-startup-id killautolock, mode "default"
+
+### Setting default mode
+bindsym Return mode "default"
+bindsym Escape mode "default"
+
+}
+### App shortcut
+bindsym $mod+x mode "$mode_autolock"
