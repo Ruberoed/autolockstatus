@@ -8,7 +8,7 @@ mode "$mode_autolock" {
 ### Start
 bindsym s exec xautolock -time 10 -locker lockb &, mode "default"
 ### Stop
-bindsym k exec --no-startup-id killautolock, mode "default"
+bindsym k exec --no-startup-id killall xautolock, mode "default"
 
 ### Setting default mode
 bindsym Return mode "default"
